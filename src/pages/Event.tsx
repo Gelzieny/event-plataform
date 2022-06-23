@@ -9,7 +9,13 @@ export function Event() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex flex-1">
-        {slug ? <Video lessonSlug={slug} /> : <div className="flex-1"></div>}
+        {slug ? (
+          <Video lessonSlug={slug} />
+        ) : (
+          <div className="flex-1">
+            <img src="../assests/plano_fundo.svg" alt="" />
+          </div>
+        )}
         <Sidebar />
       </main>
     </div>
